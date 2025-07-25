@@ -1,0 +1,45 @@
+# define bg band = Transform("cg145", zoom=.75)
+
+image concert:
+    #subpixel True
+    size (1280, 720)
+    xalign 0.5
+    yalign 0.5
+
+    parallel:
+        "ccg145"
+        pause 20
+        time 43.0
+
+    parallel:
+        # Ryo
+        crop (213, 778, 590, 332)
+        pause 0.5
+        easeout .6 crop (286, 818, 469, 264)
+
+        crop (87, 370, 590, 332)
+        easein .8 crop (14, 306, 791, 445)
+
+        # Nijika
+        linear 2.0 crop (900, 0.5, 570, 250)
+
+        time 5.0
+        linear 4.0 crop (0, 482, 1738, 978)
+        easein 4.0 crop (267, 91, 2133, 1200)
+        easeout 4.0 crop (0, 91, 2133, 1200)
+
+
+    time 20.0
+
+
+
+    show cg145:
+        size (1920, 1080)
+        xanchor 0 yanchor 0
+        xpos 0 ypos -428
+        linear 3.0 xpos -220 ypos -80
+        pause 0.5
+        linear 0.5 xpos -570 ypos -250
+        pause 0.5
+        linear 0.1 xpos 0 ypos 0
+        linear 1.5 crop (0.0, 0.0, 1920, 1080)
